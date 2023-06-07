@@ -12,20 +12,19 @@ app.use(cors())
 app.get('/', function (req, res) {
   res.send('<h1>초기화면</h1>' + " " + "<a href='https://www.kmuteam4.store'>원래 주소로 돌아갑니다.</a>")
 })
+app.get('/GetControl', function (req, res) { //control 정보를 원한다면
+  res.json({
+    control1 : control_1,
+    control2 : control_2,
+    control3 : control_3,
+    control4 : control_4,
+  });
+});
 
 app.get('/control/:id', function (req, res) {
     const q = req.params
     //console.log(q)
 
-    if (q.id=="GetControl") { //GetControl 이라면: control정보를 원하는거라면
-        res.json({
-            control1 : control_1,
-            control2 : control_2,
-            control3 : control_3,
-            control4 : control_4,
-        })
-    }
-  
     if(q.id=="A") {           //control1 버튼이라면
         control_1 = !control_1
         res.send("control1 : " + control_1 + "<br><a href='https://www.kmuteam4.store'>원래 주소로 돌아갑니다.</a>")
