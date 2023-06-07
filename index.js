@@ -18,16 +18,20 @@ app.get('/control/:id', function (req, res) {
     //console.log(q)
     if(q.id=="A") {         //control1 버튼이라면
         control_1 = !control_1
-        //res.send(control1)
+        res.send("control1 : " + control_1)
+        res.send("<a href='https://www.kmuteam4.store'>원래 주소로 돌아갑니다.</a>")
     } else if (q.id=="B") { //control2 버튼이라면
         control_2 = !control_2
-        //res.send(control2)
+        res.send("control2 : " + control_2)
+        res.send("<a href='https://www.kmuteam4.store'>원래 주소로 돌아갑니다.</a>")
     } else if (q.id=="C") { //control3 버튼이라면
         control_3 = !control_3
-        //res.send(control3)
+        res.send("control3 : " + control_3)
+        res.send("<a href='https://www.kmuteam4.store'>원래 주소로 돌아갑니다.</a>")
     } else if (q.id=="D") { //control4 버튼이라면
         control_4 = !control_4
-        //res.send(control4)
+        res.send("control4 : " + control_4)
+        res.send("<a href='https://www.kmuteam4.store'>원래 주소로 돌아갑니다.</a>")
     } else if (q.id=="GetControl") { //GetControl 이라면: control정보를 원하는거라면
         res.json({
             control1 : control_1,
