@@ -14,10 +14,10 @@ app.get('/', function (req, res) {
 })
 app.get('/GetControl', function (req, res) { //control 정보를 원한다면
   res.json({
-    "control1" : control_1,
-    "control2" : control_2,
-    "control3" : control_3,
-    "control4" : control_4,
+    control1 : control_1,
+    control2 : control_2,
+    control3 : control_3,
+    control4 : control_4,
   });
 });
 
